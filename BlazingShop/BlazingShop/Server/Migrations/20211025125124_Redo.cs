@@ -2,7 +2,7 @@
 
 namespace BlazingShop.Server.Migrations
 {
-    public partial class EditionSeeding : Migration
+    public partial class Redo : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

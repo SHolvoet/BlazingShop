@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazingShop.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211025111232_EditionSeeding")]
-    partial class EditionSeeding
+    [Migration("20211025125124_Redo")]
+    partial class Redo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
