@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Blazored.LocalStorage;
 using Blazored.Toast;
 using BlazingShop.Client.Services.CartService;
+using BlazingShop.Client.Services.StatService;
 using Microsoft.AspNetCore.Components.Authorization;
 
 namespace BlazingShop.Client
@@ -32,6 +33,7 @@ namespace BlazingShop.Client
             builder.Services.AddOptions();
             builder.Services.AddAuthorizationCore();
             builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+            builder.Services.AddScoped<IStatService, StatService>();
 
             await builder.Build().RunAsync();
         }
