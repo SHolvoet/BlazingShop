@@ -39,6 +39,11 @@ namespace BlazingShop.Server.Services.ProductService
             return product;
         }
 
+        public async Task<List<Product>> SearchProducts(string searchText)
+        {
+            return await _context.Products.Where(p => p.Title.Contains(searchText) || p.Description.Contains(searchText)).ToListAsync();
+        }
+
         public async Task<List<Product>> GetProductsByCategory(string categoryUrl)
         {
             Category category = await _categoryService.GetCategoryByUrl(categoryUrl);
